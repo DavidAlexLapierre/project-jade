@@ -52,21 +52,21 @@ class UnitContainer : Entity {
 
         switch(_type) {
             case UnitType.Fast:
-                hoverMsg.SetMessage("Blitz", "Unit moving at a fast pace", "Has low damage and health", "Adds this unit to the queue");
+                hoverMsg.SetMessage("Striker", "Unit moving at a fast pace", "Has low damage and health", "Adds this unit to the queue");
                 hoverMsg.SetIcons(new MessageBoxIconData(ico1, 0, UnitDataHelper.fastUnitStats.health.ToString()),
                                   new MessageBoxIconData(ico2, 1, UnitDataHelper.fastUnitStats.damage.ToString()),
                                   new MessageBoxIconData(ico3, 2, UnitDataHelper.fastUnitStats.speed.ToString()),
                                   new MessageBoxIconData(ico4, 0, UnitDataHelper.fastUnitStats.cost.ToString()));
                 break;
             case UnitType.Regular:
-                hoverMsg.SetMessage("Sustain", "Unit moving at a medium pace", "Has medium damage and health", "Adds this unit to the queue");
+                hoverMsg.SetMessage("Sentinel", "Unit moving at a medium pace", "Has medium damage and health", "Adds this unit to the queue");
                 hoverMsg.SetIcons(new MessageBoxIconData(ico1, 0, UnitDataHelper.regularUnitStats.health.ToString()),
                                   new MessageBoxIconData(ico2, 1, UnitDataHelper.regularUnitStats.damage.ToString()),
                                   new MessageBoxIconData(ico3, 2, UnitDataHelper.regularUnitStats.speed.ToString()),
                                   new MessageBoxIconData(ico4, 0, UnitDataHelper.regularUnitStats.cost.ToString()));
                 break;
             case UnitType.Slow:
-                hoverMsg.SetMessage("Heavy", "Unit moving at a slow pace", "Has high damage and health", "Adds this unit to the queue");
+                hoverMsg.SetMessage("Bulwark", "Unit moving at a slow pace", "Has high damage and health", "Adds this unit to the queue");
                 hoverMsg.SetIcons(new MessageBoxIconData(ico1, 0, UnitDataHelper.slowUnitStats.health.ToString()),
                                   new MessageBoxIconData(ico2, 1, UnitDataHelper.slowUnitStats.damage.ToString()),
                                   new MessageBoxIconData(ico3, 2, UnitDataHelper.slowUnitStats.speed.ToString()),

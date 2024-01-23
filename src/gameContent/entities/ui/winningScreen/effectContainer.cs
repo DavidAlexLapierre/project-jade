@@ -55,15 +55,15 @@ class EffectContainer : Entity {
         switch (randId) {
             case 0:
                 type = UnitType.Fast;
-                unitType = "Blitz";
+                unitType = "Striker";
                 break;
             case 1:
                 type = UnitType.Regular;
-                unitType = "Sustain";
+                unitType = "Sentinel";
                 break;
             case 2:
                 type = UnitType.Slow;
-                unitType = "Heavy";
+                unitType = "Bulwark";
                 break;
         }
 

@@ -26,9 +26,9 @@ class HowToPlay : Entity {
         renderer.DrawStringTo(LayerType.UI, font, "- Mouse over anything for explanation", new Vector2(offsetX, offsetY * 5f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
 
         renderer.DrawStringTo(LayerType.UI, font, "Keybinds", new Vector2(offsetX, offsetY * 7f), Color.White, 0, Vector2.Zero, 24, SpriteEffects.None, 0);
-        renderer.DrawStringTo(LayerType.UI, font, "Q:         Add Blitz unit to the queue", new Vector2(offsetX, offsetY * 8f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
-        renderer.DrawStringTo(LayerType.UI, font, "W:         Add Sustain unit to the queue", new Vector2(offsetX, offsetY * 8.5f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
-        renderer.DrawStringTo(LayerType.UI, font, "E:         Add Heavy unit to the queue", new Vector2(offsetX, offsetY * 9f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
+        renderer.DrawStringTo(LayerType.UI, font, "Q:         Add Striker unit to the queue", new Vector2(offsetX, offsetY * 8f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
+        renderer.DrawStringTo(LayerType.UI, font, "W:         Add Seninel unit to the queue", new Vector2(offsetX, offsetY * 8.5f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
+        renderer.DrawStringTo(LayerType.UI, font, "E:         Add Bulwark unit to the queue", new Vector2(offsetX, offsetY * 9f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
         renderer.DrawStringTo(LayerType.UI, font, "Enter:     Start the round", new Vector2(offsetX, offsetY * 9.5f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
         renderer.DrawStringTo(LayerType.UI, font, "Backspace: Remove last unit from the queue", new Vector2(offsetX, offsetY * 10f), Color.White, 0, Vector2.Zero, 12, SpriteEffects.None, 0);
 

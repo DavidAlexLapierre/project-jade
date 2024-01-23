@@ -2,12 +2,10 @@ using System;
 using System.Collections.Generic;
 using Jade;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 class SettingsController : Entity {
     List<OptionActionButton> actions;
-    OptionActionButton fullScreen;
     OptionActionButton backgroundSound;
     OptionActionButton soundEffect;
     OptionActionButton back;
@@ -19,10 +17,6 @@ class SettingsController : Entity {
     void Init() {
         selectedIndex = 0;
         actions = new List<OptionActionButton>();
-
-        fullScreen = new OptionActionButton(game, "Fullscreen: ", Settings.Fullscreen);
-        fullScreen.handler += HandleFullscreenAction;
-        fullScreen.SetIndex(Settings.currentFullscreen);
 
         backgroundSound = new OptionActionButton(game, "Music: ", Settings.BFXVolume);
         backgroundSound.handler += HandleBackgroundVolumeAction;
@@ -36,12 +30,9 @@ class SettingsController : Entity {
 
         back.handler += HandleBackAction;
 
-        actions.Add(fullScreen);
         actions.Add(backgroundSound);
         actions.Add(soundEffect);
         actions.Add(back);
-
-        fullScreen.Select();
 
         AddChildren(new MenuBackground(game), 0, 0);
 
@@ -50,17 +41,11 @@ class SettingsController : Entity {
 
         var offset = uiHeight / 10;
 
-        AddChildren(fullScreen, uiWidth / 2 - uiWidth / 6, offset);
-        AddChildren(backgroundSound, uiWidth / 2 - uiWidth / 6, 2 * offset);
-        AddChildren(soundEffect, uiWidth / 2 - uiWidth / 6, 3 * offset);
+        AddChildren(backgroundSound, uiWidth / 2 - uiWidth / 6, offset);
+        AddChildren(soundEffect, uiWidth / 2 - uiWidth / 6, 2 * offset);
         AddChildren(back, uiWidth / 2 - uiWidth / 6, 8 * offset);
-    }
 
-    void HandleFullscreenAction(object sender, EventArgs args) {
-        fullScreen.IncreaseOption();
-        Settings.SetFullscreen(fullScreen.currentIndex);
-        game.Services.GetService<GraphicsDeviceManager>().ToggleFullScreen();
-        game.Services.GetService<Mixer>().Play(MixerLayerType.Game, "menuBlip");
+        actions[selectedIndex].Select();
     }
 
     void HandleBackgroundVolumeAction(object sender, EventArgs args) {

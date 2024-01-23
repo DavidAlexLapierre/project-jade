@@ -23,13 +23,13 @@ class UnitDisplay : Entity {
         string unitName = "";
         switch (_type) {
             case UnitType.Fast:
-                unitName = "Cibis queued";
+                unitName = "Striker queued";
                 break;
             case UnitType.Regular:
-                unitName = "Asurge queued";
+                unitName = "Sentinel queued";
                 break;
             case UnitType.Slow:
-                unitName = "Drukloz queued";
+                unitName = "Bulwark queued";
                 break;
         }
 
