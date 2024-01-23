@@ -39,11 +39,11 @@ class SettingsController : Entity {
         var uiWidth = game.Services.GetService<GraphicsDeviceManager>().PreferredBackBufferWidth;
         var uiHeight = game.Services.GetService<GraphicsDeviceManager>().PreferredBackBufferHeight;
 
-        var offset = uiHeight / 10;
+        var offset = uiHeight / 5;
 
         AddChildren(backgroundSound, uiWidth / 2 - uiWidth / 6, offset);
         AddChildren(soundEffect, uiWidth / 2 - uiWidth / 6, 2 * offset);
-        AddChildren(back, uiWidth / 2 - uiWidth / 6, 8 * offset);
+        AddChildren(back, uiWidth / 2 - uiWidth / 6, 4 * offset);
 
         actions[selectedIndex].Select();
     }
